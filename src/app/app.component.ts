@@ -13,7 +13,7 @@ import {ThemeService} from './services/theme.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title = 'NexusPro';
+  title = 'Pixel - Développeur Web Freelance';
 
   constructor(private themeService: ThemeService) {}
 

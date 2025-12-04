@@ -1,6 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {Component} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -12,13 +12,39 @@ import {RouterModule} from '@angular/router';
 export class FooterComponent {
   currentYear = new Date().getFullYear();
 
-  socialLinks = [
-    { name: 'Facebook', url: '#', icon: 'assets/icons/facebook.png' },
-    { name: 'Instagram', url: 'https://www.instagram.com/reikietsens?igsh=MXczdHdwcjExdTg1cQ==', icon: 'assets/icons/instagram.png' },
-  ];
+  constructor(private router: Router) {}
 
-  quickLinks = [
-    { name: 'Accueil', url: '/home' },
-    { name: 'Contact', url: '/contact' }
-  ];
+  scrollToSection(sectionId: string, event?: Event): void {
+    if (event) {
+      event.preventDefault();
+    }
+
+    // Check if we're on the home page
+    const currentUrl = this.router.url;
+    
+    if (currentUrl === '/home' || currentUrl === '/') {
+      this.scrollToElement(sectionId);
+    } else {
+      // Navigate to home first, then scroll
+      this.router.navigate(['/home']).then(() => {
+        setTimeout(() => {
+          this.scrollToElement(sectionId);
+        }, 100);
+      });
+    }
+  }
+
+  private scrollToElement(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const headerHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
 }

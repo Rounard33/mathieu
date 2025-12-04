@@ -1,0 +1,53 @@
+<!-- Section Processus -->
+<section class="process" id="process">
+  <div class="hex-pattern"></div>
+  
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12,6 12,12 16,14"/>
+        </svg>
+        Processus
+      </div>
+      <h2 class="section-title">Comment ça marche ?</h2>
+      <p class="section-description">
+        Un accompagnement simple et transparent, de l'idée à la mise en ligne
+      </p>
+    </div>
+    
+    <div class="process-timeline">
+      @for (step of steps(); track step.id) {
+        <div class="step-card">
+          <div class="step-number">
+            <span>{{ step.id }}</span>
+          </div>
+          
+          <div class="step-connector">
+            <div class="connector-line"></div>
+            <div class="connector-dot"></div>
+          </div>
+          
+          <div class="step-content">
+            <div class="step-icon" [innerHTML]="step.icon"></div>
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+    
+    <!-- CTA -->
+    <div class="process-cta">
+      <p class="cta-text">Prêt à démarrer votre projet ?</p>
+      <a href="#contact" class="btn btn-primary btn-lg" (click)="scrollToContact($event)">
+        <span>Discutons ensemble</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+

@@ -1,53 +1,82 @@
-<!-- Section Prestations -->
-<section class="prestations" id="prestations">
+<!-- Section Services -->
+<section class="services" id="services">
+  <div class="hex-pattern"></div>
+  
   <div class="container">
-    <app-section-header 
-      badge="Prestations" 
-      title="Mes offres de soins"
-      description="Découvrez mes différentes prestations de bien-être adaptées à vos besoins">
-    </app-section-header>
+    <div class="section-header">
+      <div class="section-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+        Services
+      </div>
+      <h2 class="section-title">Ce que je propose</h2>
+      <p class="section-description">
+        Des solutions web adaptées à vos besoins et votre budget
+      </p>
+    </div>
     
-    <div class="prestations-grid">
-      <div class="prestation-card" *ngFor="let prestation of prestations; let i = index">
-        <div class="prestation-image-wrapper">
-          <div class="prestation-image" [style.background-image]="'url(' + prestation.image + ')'">
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <div class="service-card" [class.featured]="service.featured">
+          <div class="service-icon">
+            <div class="icon-wrapper" [innerHTML]="service.icon"></div>
           </div>
-          <div class="prestation-image-overlay" *ngIf="prestation.shortDescription">
-            <p class="prestation-short-description">{{ prestation.shortDescription }}</p>
+          
+          <div class="service-content">
+            <h3 class="service-title">{{ service.title }}</h3>
+            <p class="service-description">{{ service.description }}</p>
+            
+            <ul class="service-features">
+              @for (feature of service.features; track feature) {
+                <li class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  <span>{{ feature }}</span>
+                </li>
+              }
+            </ul>
           </div>
-          <!-- Badge contre-indications -->
-          <div class="contraindication-badge" *ngIf="prestation.hasContraindications" title="Cette prestation comporte des contre-indications">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="8" x2="12" y2="12"/>
-              <line x1="12" y1="16" x2="12.01" y2="16"/>
-            </svg>
-            <span>Contre-indications</span>
+          
+          <div class="service-footer">
+            <a href="#contact" class="btn btn-service" (click)="scrollToContact($event)">
+              <span>Demander un devis</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
           </div>
+          
+          @if (service.featured) {
+            <div class="featured-badge">Populaire</div>
+          }
         </div>
-        <div class="prestation-info">
-          <h3 class="prestation-name">{{ prestation.name }}</h3>
-          <div class="prestation-details">
-            <div class="prestation-price">{{ prestation.price }}</div>
-            <div class="prestation-price" *ngIf="prestation.priceOption">
-              {{ prestation.priceOption }}
-            </div>
-            <div class="prestation-price" *ngIf="prestation.atHome">
-              {{ prestation.atHome }}
-            </div>
-            <div class="prestation-duration" *ngIf="prestation.duration">
-              Durée : {{ prestation.duration }}
-            </div>
-          </div>
-          <div class="prestation-buttons">
-            <button class="btn btn-outline prestation-btn-more" (click)="openDetails.emit(prestation)">
-              En savoir plus
-            </button>
-            <button class="btn btn-primary prestation-btn" (click)="onBookingClick(prestation)">
-              {{ prestation.requiresContact ? 'Contacter' : 'Réserver' }}
-            </button>
-          </div>
+      }
+    </div>
+    
+    <!-- Additional Info -->
+    <div class="services-info">
+      <div class="info-card">
+        <div class="info-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
         </div>
+        <div class="info-content">
+          <h4>Un projet spécifique ?</h4>
+          <p>
+            Chaque projet est unique. Contactez-moi pour discuter de vos besoins 
+            et obtenir un devis personnalisé gratuit.
+          </p>
+        </div>
+        <a href="#contact" class="btn btn-outline" (click)="scrollToContact($event)">
+          Parlons-en
+        </a>
       </div>
     </div>
   </div>

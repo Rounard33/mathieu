@@ -2,27 +2,34 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Reiki & sens</title>
+  <title>Pixel - Développeur Web Freelance | Création de sites sur-mesure en Gironde</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Reiki & sens - Soins énergétiques et harmonisation des lieux de vie. Découvrez nos prestations de reiki, créations artisanales et cartes cadeaux pour votre bien-être.">
-  <meta name="keywords" content="reiki, soins énergétiques, harmonisation, bien-être, créations artisanales, cartes cadeaux, thérapie énergétique">
-  <meta name="author" content="Reiki & sens">
+  <meta name="description" content="Pixel - Développeur web freelance en Gironde. Création de sites vitrines, applications web sur-mesure, refonte et maintenance. Mathieu Ehrsam à Lestiac-sur-Garonne.">
+  <meta name="keywords" content="développeur web, freelance, création site internet, site vitrine, application web, gironde, bordeaux, lestiac-sur-garonne, web design, angular">
+  <meta name="author" content="Mathieu Ehrsam - Pixel">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pixel - Développeur Web Freelance">
+  <meta property="og:description" content="Création de sites web professionnels sur-mesure. Accompagnement personnalisé pour entrepreneurs et PME en Gironde.">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pixel - Développeur Web Freelance">
+  <meta name="twitter:description" content="Création de sites web professionnels sur-mesure. Accompagnement personnalisé pour entrepreneurs et PME en Gironde.">
   
   <!-- Security Headers -->
-  <!-- Note: La CSP principale est définie via les headers HTTP dans l'API -->
-  <!-- Note: frame-ancestors et X-Frame-Options ne fonctionnent que via headers HTTP, pas dans meta tags -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-hashes'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: https://fonts.gstatic.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' http://localhost:3000 https://*.supabase.co https://*.vercel.app wss://*.supabase.co; frame-ancestors 'none'; frame-src 'self' https://*.google.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <!-- X-Frame-Options ne fonctionne que via headers HTTP -->
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/logo-white.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/logo-white.png">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/logo-white.png">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1a2832">
 </head>
 <body class="app-loading">
   <!-- Style critique inline pour éviter le flash de contenu invisible -->
@@ -38,7 +45,7 @@
     }
     body.app-loading .badge,
     body.app-loading .title-line,
-    body.app-loading .description-welcome,
+    body.app-loading .description,
     body.app-loading .actions {
       animation: force-visible 0.1s 3s forwards;
     }

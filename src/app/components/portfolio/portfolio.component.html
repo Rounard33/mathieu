@@ -1,0 +1,102 @@
+<!-- Section Portfolio -->
+<section class="portfolio" id="portfolio">
+  <div class="hex-pattern"></div>
+  
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+        Portfolio
+      </div>
+      <h2 class="section-title">Mes réalisations</h2>
+      <p class="section-description">
+        Découvrez les projets sur lesquels j'ai travaillé
+      </p>
+    </div>
+    
+    <div class="portfolio-grid">
+      @for (project of projects(); track project.id) {
+        <div class="project-card" [class.in-progress]="project.status === 'in-progress'">
+          <!-- Image -->
+          <div class="project-image">
+            <div class="image-placeholder">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8"/>
+                <path d="M12 17v4"/>
+              </svg>
+              <span>Aperçu bientôt disponible</span>
+            </div>
+            
+            @if (project.status === 'in-progress') {
+              <div class="status-badge">
+                <span class="status-dot"></span>
+                En cours
+              </div>
+            }
+          </div>
+          
+          <!-- Content -->
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+            
+            <div class="project-tags">
+              @for (tag of project.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+          
+          <!-- Footer -->
+          <div class="project-footer">
+            @if (project.url) {
+              <a [href]="project.url" target="_blank" class="project-link">
+                <span>Voir le projet</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            } @else {
+              <span class="project-coming-soon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12,6 12,12 16,14"/>
+                </svg>
+                Bientôt en ligne
+              </span>
+            }
+          </div>
+        </div>
+      }
+      
+      <!-- CTA Card -->
+      <div class="cta-card">
+        <div class="cta-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="16"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="cta-title">Votre projet ici ?</h3>
+        <p class="cta-description">
+          Contactez-moi pour discuter de votre projet et rejoindre ma liste de réalisations.
+        </p>
+        <a href="#contact" class="btn btn-primary" (click)="scrollToContact($event)">
+          <span>Démarrer un projet</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+

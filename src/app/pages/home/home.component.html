@@ -2,34 +2,14 @@
 
 <app-about></app-about>
 
-<app-services 
-  [prestations]="prestations"
-  (openDetails)="openDetailsModal($event)"
-  (openBooking)="openBookingModal($event)">
-</app-services>
+<app-services></app-services>
 
-<app-products [creations]="creations"></app-products>
+<app-portfolio></app-portfolio>
 
-<app-loyalty></app-loyalty>
+<app-process></app-process>
 
-<app-location></app-location>
+<app-faq></app-faq>
 
-<app-testimonials [testimonials]="testimonials"></app-testimonials>
-
-<app-faq [faqs]="faqs"></app-faq>
-
-<app-cta (scrollToSection)="scrollToSection($event)"></app-cta>
-
-<app-prestation-modal 
-  [prestation]="selectedPrestation"
-  (close)="closeDetailsModal()"
-  (book)="openBookingModal($event)">
-</app-prestation-modal>
-
-<app-booking 
-  [prestation]="selectedPrestationForBooking"
-  (close)="closeBookingModal()"
-  (success)="onBookingSuccess($event)">
-</app-booking>
+<app-cta></app-cta>
 
 <app-scroll-to-top></app-scroll-to-top>
