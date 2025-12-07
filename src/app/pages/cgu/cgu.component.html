@@ -1,22 +1,25 @@
 <!-- Hero Section -->
 <section class="main" id="cgu">
   <div class="background">
+    <div class="hex-pattern"></div>
     <div class="gradient"></div>
-    <div class="shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-    </div>
   </div>
   
   <div class="container">
     <div class="content">
       <div class="text">
         <div class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14,2 14,8 20,8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
           <span class="badge-text">Informations légales</span>
         </div>
         
         <h1 class="title" #title>
-          <span class="title-line">Conditions Générales d'Utilisation</span>
+          <span class="title-line">Mentions Légales & CGU</span>
         </h1>
         
         <p class="description" #description>
@@ -33,98 +36,100 @@
     <div class="cgu-content">
       
       <p class="intro">
-        Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique 
-        des modalités de mise à disposition du site et des services par Pauline Le Puil et de définir les 
-        conditions d'accès et d'utilisation des services par « l'Utilisateur ».
-      </p>
-      <p class="intro">
-        Les présentes CGU sont accessibles sur le site à la rubrique « CGU ».
+        Les présentes mentions légales et conditions générales d'utilisation (CGU) ont pour objet 
+        l'encadrement juridique des modalités de mise à disposition du site <strong>pixel-webcreation.fr</strong> 
+        et de définir les conditions d'accès et d'utilisation des services par l'Utilisateur.
       </p>
 
       <!-- Article 1 -->
       <article class="cgu-article">
         <h2>Article 1 : Mentions légales</h2>
+        
+        <h4>Éditeur du site</h4>
         <p>
-          L'édition et la direction de la publication du site reikietsens.fr est assurée par <strong>Pauline LE PUIL</strong>.
+          Le site <strong>pixel-webcreation.fr</strong> est édité par <strong>Mathieu EHRSAM</strong>, 
+          auto-entrepreneur exerçant sous le nom commercial <strong>Pixel</strong>.
         </p>
+        
+        <div class="contact-card">
+          <h4>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            Coordonnées
+          </h4>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Lestiac-sur-Garonne, Gironde (33)</span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:pixel.creation33&#64;gmail.com">pixel.creation33&#64;gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <a href="tel:0649781257">06 49 78 12 57</a>
+            </div>
+          </div>
+        </div>
+
+        <h4>Hébergeur</h4>
         <p>
-          Conception et développement du site : <strong>Mathieu EHRSAM</strong>
+          Le site est hébergé par <strong>Vercel Inc.</strong><br>
+          Adresse : 440 N. Barranca Ave #4133, Covina, CA 91723, USA
         </p>
+
+        <h4>Conception et développement</h4>
         <p>
-          Les informations légales complètes sont disponibles sur la page 
-          <a routerLink="/mentions-legales">"Mentions Légales"</a> du site.
-        </p>
-        <p>
-          L'hébergeur du site reikietsens.fr est la société <strong>Vercel Inc.</strong>, dont le siège social est situé 
-          au 440 N. Barranca Ave #4133, Covina, CA 91723, USA, avec le numéro de téléphone : +1 951-383-6898.
+          Site conçu et développé par <strong>Mathieu EHRSAM - Pixel</strong>.
         </p>
       </article>
 
       <!-- Article 2 -->
       <article class="cgu-article">
         <h2>Article 2 : Accès au site</h2>
-        <p>Le site reikietsens.fr permet à l'Utilisateur un accès gratuit aux services suivants :</p>
+        <p>
+          Le site pixel-webcreation.fr permet à l'Utilisateur un accès gratuit aux services suivants :
+        </p>
         
         <div class="services-list">
           <div class="service-item">
-            <h4>1. Présentation des prestations</h4>
+            <h4>Présentation des services</h4>
             <ul>
-              <li>Consultation et description des prestations de soins énergétiques (Reiki)</li>
-              <li>Affichage des tarifs et durées des séances</li>
-              <li>Présentation des créations artisanales</li>
+              <li>Consultation et description des prestations de développement web</li>
+              <li>Présentation du portfolio et des réalisations</li>
+              <li>Information sur le processus de travail</li>
             </ul>
           </div>
           
           <div class="service-item">
-            <h4>2. Réservation en ligne</h4>
+            <h4>Formulaire de contact</h4>
             <ul>
-              <li>Prise de rendez-vous en ligne pour les séances de Reiki</li>
-              <li>Choix de la prestation souhaitée</li>
-              <li>Sélection du créneau horaire disponible</li>
-              <li>Confirmation par email</li>
+              <li>Possibilité de contacter le développeur via un formulaire dédié</li>
+              <li>Demandes de devis personnalisés</li>
+              <li>Demandes de renseignements</li>
             </ul>
           </div>
           
           <div class="service-item">
-            <h4>3. Formulaire de contact</h4>
+            <h4>Informations pratiques</h4>
             <ul>
-              <li>Possibilité de contacter le praticien via un formulaire dédié</li>
-              <li>Demandes de renseignements et informations personnalisées</li>
-            </ul>
-          </div>
-          
-          <div class="service-item">
-            <h4>4. Programme de fidélité</h4>
-            <ul>
-              <li>Suivi des séances effectuées</li>
-              <li>Cumul de points de fidélité</li>
-              <li>Attribution de séances offertes (1 séance offerte toutes les 10 séances)</li>
-            </ul>
-          </div>
-          
-          <div class="service-item">
-            <h4>5. Parrainage</h4>
-            <ul>
-              <li>Système de recommandation auprès de proches</li>
-              <li>Attribution de séances bonus pour le parrain</li>
-            </ul>
-          </div>
-          
-          <div class="service-item">
-            <h4>6. Informations pratiques</h4>
-            <ul>
-              <li>Localisation du cabinet</li>
-              <li>Horaires d'ouverture</li>
               <li>Foire aux questions (FAQ)</li>
-              <li>Témoignages clients</li>
+              <li>Informations de contact</li>
             </ul>
           </div>
         </div>
 
-        <p>
-          Le site ne propose pas de paiement en ligne. Les règlements s'effectuent directement au cabinet 
-          par espèces, carte bancaire, virement ou chèque.
-        </p>
         <p>
           Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à Internet. 
           Tous les frais supportés par l'Utilisateur pour accéder au service (matériel informatique, 
@@ -139,20 +144,35 @@
           Le site assure à l'Utilisateur une collecte et un traitement d'informations personnelles dans 
           le respect de la vie privée conformément à la loi n°78-17 du 6 janvier 1978 relative à 
           l'informatique, aux fichiers et aux libertés, ainsi qu'au Règlement Général sur la Protection 
-          des Données (RGPD).
+          des Données (RGPD - UE 2016/679).
         </p>
+        
+        <h4>Données collectées</h4>
         <p>
-          Les données collectées lors de la réservation en ligne (nom, prénom, email, téléphone) sont 
-          utilisées exclusivement pour la gestion des rendez-vous et la communication avec l'Utilisateur.
-        </p>
-        <p>
-          En vertu de la loi Informatique et Libertés et du RGPD, l'Utilisateur dispose d'un droit d'accès, 
-          de rectification, de suppression, d'opposition et de portabilité de ses données personnelles. 
-          L'Utilisateur exerce ce droit :
+          Les données collectées via le formulaire de contact (nom, email, téléphone, message) sont 
+          utilisées exclusivement pour :
         </p>
         <ul>
-          <li>via le formulaire de contact du site</li>
-          <li>par email à l'adresse : <a href="mailto:pauline.lpenergies&#64;gmail.com">pauline.lpenergies&#64;gmail.com</a></li>
+          <li>Répondre aux demandes de renseignements</li>
+          <li>Établir des devis personnalisés</li>
+          <li>Communiquer sur les projets en cours</li>
+        </ul>
+
+        <h4>Service tiers</h4>
+        <p>
+          Les données du formulaire de contact sont traitées par le service <strong>Formspree</strong> 
+          (https://formspree.io), qui respecte le RGPD. Les données ne sont pas conservées au-delà 
+          du temps nécessaire au traitement de la demande.
+        </p>
+        
+        <h4>Vos droits</h4>
+        <p>
+          En vertu du RGPD, l'Utilisateur dispose d'un droit d'accès, de rectification, de suppression, 
+          d'opposition et de portabilité de ses données personnelles. Pour exercer ces droits :
+        </p>
+        <ul>
+          <li>Via le formulaire de contact du site</li>
+          <li>Par email à : <a href="mailto:pixel.creation33&#64;gmail.com">pixel.creation33&#64;gmail.com</a></li>
         </ul>
         <p>Toute demande sera traitée dans un délai de 30 jours.</p>
       </article>
@@ -161,24 +181,22 @@
       <article class="cgu-article">
         <h2>Article 4 : Propriété intellectuelle</h2>
         <p>
-          Les marques, logos, signes ainsi que tous les contenus du site (textes, images, son…) font 
-          l'objet d'une protection par le Code de la propriété intellectuelle et plus particulièrement 
-          par le droit d'auteur.
+          Les marques, logos, signes ainsi que tous les contenus du site (textes, images, code source, 
+          design) font l'objet d'une protection par le Code de la propriété intellectuelle et plus 
+          particulièrement par le droit d'auteur.
+        </p>
+        <p>
+          La marque <strong>Pixel</strong> et le logo associé sont la propriété exclusive de Mathieu EHRSAM. 
+          Toute reproduction, représentation, modification ou exploitation non autorisée est interdite.
         </p>
         <p>
           L'Utilisateur doit solliciter l'autorisation préalable du site pour toute reproduction, 
-          publication, copie des différents contenus. Il s'engage à une utilisation des contenus du 
-          site dans un cadre strictement privé, toute utilisation à des fins commerciales et 
-          publicitaires est strictement interdite.
+          publication ou copie des différents contenus. Il s'engage à une utilisation des contenus 
+          dans un cadre strictement privé ; toute utilisation à des fins commerciales est interdite.
         </p>
         <p>
-          Toute représentation totale ou partielle de ce site par quelque procédé que ce soit, sans 
-          l'autorisation expresse de l'exploitant du site Internet constituerait une contrefaçon 
-          sanctionnée par l'article L 335-2 et suivants du Code de la propriété intellectuelle.
-        </p>
-        <p>
-          Il est rappelé conformément à l'article L122-5 du Code de propriété intellectuelle que 
-          l'Utilisateur qui reproduit, copie ou publie le contenu protégé doit citer l'auteur et sa source.
+          Toute représentation totale ou partielle de ce site sans autorisation constituerait une 
+          contrefaçon sanctionnée par les articles L 335-2 et suivants du Code de la propriété intellectuelle.
         </p>
       </article>
 
@@ -186,160 +204,93 @@
       <article class="cgu-article">
         <h2>Article 5 : Responsabilité</h2>
         <p>
-          Les sources des informations diffusées sur le site reikietsens.fr sont réputées fiables mais 
-          le site ne garantit pas qu'il soit exempt de défauts, d'erreurs ou d'omissions.
+          Les informations communiquées sur le site pixel-webcreation.fr sont présentées à titre 
+          indicatif et général, sans valeur contractuelle. Malgré des mises à jour régulières, 
+          le site ne peut être tenu responsable de la modification des dispositions administratives 
+          et juridiques survenant après la publication.
         </p>
         <p>
-          Les informations communiquées sont présentées à titre indicatif et général sans valeur 
-          contractuelle. Malgré des mises à jour régulières, le site reikietsens.fr ne peut être tenu 
-          responsable de la modification des dispositions administratives et juridiques survenant après 
-          la publication. De même, le site ne peut être tenu responsable de l'utilisation et de 
-          l'interprétation de l'information contenue dans ce site.
+          Le site décline toute responsabilité concernant :
         </p>
+        <ul>
+          <li>Les éventuelles erreurs ou omissions dans les contenus</li>
+          <li>L'utilisation et l'interprétation de l'information contenue sur le site</li>
+          <li>Les dommages résultant d'une intrusion frauduleuse d'un tiers</li>
+          <li>Les virus qui pourraient infecter l'équipement de l'Utilisateur</li>
+        </ul>
         <p>
-          Le site reikietsens.fr ne peut être tenu pour responsable d'éventuels virus qui pourraient 
-          infecter l'ordinateur ou tout matériel informatique de l'Internaute, suite à une utilisation, 
-          à l'accès, ou au téléchargement provenant de ce site.
-        </p>
-        <p>
-          La responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible 
-          et insurmontable d'un tiers.
+          La responsabilité du site ne peut être engagée en cas de force majeure ou du fait 
+          imprévisible et insurmontable d'un tiers.
         </p>
       </article>
 
       <!-- Article 6 -->
       <article class="cgu-article">
-        <h2>Article 6 : Avertissement relatif aux prestations de bien-être</h2>
+        <h2>Article 6 : Liens hypertextes</h2>
         <p>
-          Les prestations proposées sur le site reikietsens.fr, notamment les séances de Reiki et soins 
-          énergétiques, sont des pratiques de bien-être et de relaxation. Elles s'inscrivent dans une 
-          démarche de développement personnel et de mieux-être.
-        </p>
-        <div class="warning-box">
-          <strong>IMPORTANT :</strong> Ces prestations ne sont en aucun cas des actes médicaux et ne se 
-          substituent pas à un diagnostic, un traitement médical ou un suivi par un professionnel de santé. 
-          Le Reiki ne prétend pas guérir, traiter ou diagnostiquer une maladie.
-        </div>
-        <p>L'Utilisateur reconnaît que :</p>
-        <ul>
-          <li>Les séances proposées sont complémentaires et ne remplacent pas une consultation médicale</li>
-          <li>Il ne doit jamais interrompre ou modifier un traitement médical en cours sans l'avis de son médecin</li>
-          <li>En cas de problème de santé, il doit consulter un professionnel de santé qualifié</li>
-          <li>Les résultats des séances peuvent varier d'une personne à l'autre et ne sont pas garantis</li>
-        </ul>
-        <p>
-          Les témoignages présentés sur le site reflètent des expériences individuelles et ne constituent 
-          pas une garantie de résultats similaires.
+          Des liens hypertextes peuvent être présents sur le site, notamment vers le portfolio 
+          ou des ressources externes. L'Utilisateur est informé qu'en cliquant sur ces liens, 
+          il quittera le site pixel-webcreation.fr.
         </p>
         <p>
-          En utilisant les services du site et en réservant une prestation, l'Utilisateur reconnaît avoir 
-          pris connaissance de cet avertissement et l'accepter.
+          Le site n'a pas de contrôle sur les pages web externes et ne saurait être responsable 
+          de leur contenu.
         </p>
       </article>
 
       <!-- Article 7 -->
       <article class="cgu-article">
-        <h2>Article 7 : Conditions de réservation</h2>
-        <h4>Prise de rendez-vous</h4>
+        <h2>Article 7 : Cookies</h2>
         <p>
-          La réservation d'une séance s'effectue via le formulaire en ligne disponible sur le site. 
-          Un email de confirmation est automatiquement envoyé à l'Utilisateur à l'adresse email 
-          renseignée lors de la réservation.
+          Le site <strong>pixel-webcreation.fr n'utilise aucun cookie</strong> de tracking, 
+          d'analyse ou publicitaire.
         </p>
-        <h4>Annulation et modification</h4>
-        <p>
-          L'Utilisateur peut annuler ou modifier son rendez-vous en contactant le praticien par téléphone 
-          ou par email, dans un délai raisonnable avant l'heure prévue du rendez-vous.
-        </p>
-        <p>
-          Il est demandé à l'Utilisateur de prévenir le plus tôt possible en cas d'empêchement afin de 
-          permettre une réorganisation de l'agenda.
-        </p>
-        <h4>Retard</h4>
-        <p>
-          En cas de retard de l'Utilisateur, la séance pourra être écourtée du temps de retard afin de 
-          respecter les rendez-vous suivants.
-        </p>
-      </article>
-
-       <!-- Article 8 -->
-      <article class="cgu-article">
-        <h2>Article 8 : Droit de rétractation</h2>
-        <p>
-          Conformément à l'article L221-18 du Code de la consommation, vous disposez 
-          d'un délai de 14 jours pour exercer votre droit de rétractation.
-        </p>
-        <p>
-          Toutefois, conformément à l'article L221-28 du Code de la consommation, 
-          ce droit ne peut être exercé pour les prestations de services pleinement 
-          exécutées avant la fin du délai de rétractation et dont l'exécution a 
-          commencé avec votre accord préalable.
-        </p>
-        <p>
-          En réservant une séance dont la date est fixée avant l'expiration du délai 
-          de 14 jours, vous reconnaissez renoncer expressément à votre droit de 
-          rétractation une fois la séance effectuée.
-        </p>
-      </article>
-
-      <!-- Article 9 -->
-      <article class="cgu-article">
-        <h2>Article 9 : Liens hypertextes</h2>
-        <p>
-          Des liens hypertextes peuvent être présents sur le site. L'Utilisateur est informé qu'en 
-          cliquant sur ces liens, il sortira du site reikietsens.fr. Ce dernier n'a pas de contrôle 
-          sur les pages web sur lesquelles aboutissent ces liens et ne saurait, en aucun cas, être 
-          responsable de leur contenu.
-        </p>
-      </article>
-
-      <!-- Article 10 -->
-      <article class="cgu-article">
-        <h2>Article 10 : Cookies et stockage local</h2>
-        <p>Le site reikietsens.fr n'utilise aucun cookie ni stockage local.</p>
         <p>Le site n'utilise pas :</p>
         <ul>
-          <li>De cookies de tracking ou d'analyse</li>
+          <li>De cookies de tracking ou d'analyse (Google Analytics, etc.)</li>
           <li>De cookies publicitaires</li>
           <li>De cookies tiers</li>
-          <li>De stockage local (localStorage)</li>
+          <li>De stockage local (localStorage) pour des données personnelles</li>
         </ul>
         <p>
-          Le thème d'affichage (clair/sombre) suit automatiquement les préférences système de l'Utilisateur.
+          Votre navigation sur ce site est donc totalement anonyme.
         </p>
       </article>
 
-      <!-- Article 11 -->
+      <!-- Article 8 -->
       <article class="cgu-article">
-        <h2>Article 11 : Modification des CGU</h2>
+        <h2>Article 8 : Modification des CGU</h2>
         <p>
-          L'éditeur se réserve le droit de modifier les présentes CGU à tout moment. Les modifications 
-          entrent en vigueur dès leur publication sur le site.
+          L'éditeur se réserve le droit de modifier les présentes CGU à tout moment. 
+          Les modifications entrent en vigueur dès leur publication sur le site.
         </p>
         <p>
-          L'Utilisateur est invité à consulter régulièrement cette page pour prendre connaissance des 
-          éventuelles modifications.
+          L'Utilisateur est invité à consulter régulièrement cette page pour prendre connaissance 
+          des éventuelles modifications.
         </p>
         <p>La date de dernière mise à jour est indiquée en haut du présent document.</p>
       </article>
 
-      <!-- Article 12 -->
+      <!-- Article 9 -->
       <article class="cgu-article">
-        <h2>Article 12 : Droit applicable et juridiction compétente</h2>
+        <h2>Article 9 : Droit applicable</h2>
         <p>
-          La législation française s'applique au présent contrat. En cas d'absence de résolution amiable 
-          d'un litige né entre les parties, les tribunaux français seront seuls compétents pour en connaître.
+          La législation française s'applique au présent contrat. En cas d'absence de résolution 
+          amiable d'un litige né entre les parties, les tribunaux français seront seuls compétents.
         </p>
         <p>
-          Pour toute question relative à l'application des présentes CGU, vous pouvez joindre l'éditeur 
-          aux coordonnées inscrites à l'Article 1.
+          Pour toute question relative à l'application des présentes CGU, vous pouvez contacter 
+          l'éditeur aux coordonnées indiquées à l'Article 1.
         </p>
       </article>
 
       <!-- Back to home -->
       <div class="back-link">
         <a routerLink="/home" class="btn btn-outline">
-          ← Retour à l'accueil
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Retour à l'accueil
         </a>
       </div>
 
