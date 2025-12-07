@@ -38,6 +38,11 @@ export class FaqComponent {
       isOpen: false
     },
     {
+      question: 'Qu\'est-ce que le référencement SEO ?',
+      answer: 'Le SEO (Search Engine Optimization), ou référencement naturel, consiste à aider les moteurs de recherche à interpréter votre contenu, et à aider les internautes à trouver votre site.',
+      isOpen: false
+    },
+    {
       question: 'Le référencement (SEO) est-il inclus ?',
       answer: 'Oui, j\'optimise tous mes sites pour le référencement naturel : structure technique, balises, vitesse de chargement... Cela vous assure une bonne base pour apparaître sur Google.',
       isOpen: false
