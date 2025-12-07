@@ -173,6 +173,12 @@
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
+  
+  a {
+      display: flex;
+      max-width: 300px;
+      margin: 0 auto;
+  }
 }
 
 .cta-text {

@@ -28,6 +28,12 @@
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  @media (max-width: 640px) {
+    gap: var(--spacing-xl);
+    display: contents;
   }
 }
 
@@ -38,6 +44,12 @@
   border: 1px solid rgba(201, 162, 39, 0.1);
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
+
+  @media (max-width: 640px) {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: 20px;
+  }
 }
 
 .contact-form {

@@ -26,7 +26,7 @@ export class ProcessComponent {
     },
     {
       id: 2,
-      title: 'Devis Personnalisé',
+      title: 'Personnalisation',
       description: 'Je vous propose un devis détaillé et transparent, adapté à votre budget et à vos attentes.',
       iconType: 'quote'
     },
