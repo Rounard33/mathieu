@@ -31,6 +31,9 @@ export class CtaComponent {
   submitError = signal(false);
   errorMessage = signal('');
   
+  // Honeypot anti-spam (doit rester vide)
+  honeypot = '';
+  
   formData: ContactForm = {
     name: '',
     email: '',
@@ -42,6 +45,15 @@ export class CtaComponent {
 
   async onSubmit(): Promise<void> {
     if (this.isSubmitting) return;
+    
+    // Anti-spam : si le honeypot est rempli, c'est un bot
+    if (this.honeypot) {
+      console.log('Bot détecté via honeypot');
+      // On simule un succès pour ne pas alerter le bot
+      this.submitSuccess.set(true);
+      setTimeout(() => this.submitSuccess.set(false), 8000);
+      return;
+    }
     
     this.isSubmitting = true;
     this.submitError.set(false);

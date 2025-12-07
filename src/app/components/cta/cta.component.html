@@ -20,6 +20,16 @@
       <!-- Contact Form -->
       <div class="contact-form-card">
         <form class="contact-form" (ngSubmit)="onSubmit()" #contactFormRef="ngForm">
+          <!-- Honeypot anti-spam (invisible pour les humains) -->
+          <input 
+            type="text" 
+            name="_gotcha" 
+            [(ngModel)]="honeypot"
+            class="honeypot"
+            tabindex="-1"
+            autocomplete="off"
+          >
+          
           <div class="form-row">
             <div class="form-group">
               <label for="name" class="form-label">Nom complet *</label>
