@@ -1,5 +1,6 @@
 import {CommonModule} from '@angular/common';
-import {Component, signal} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Component, inject, signal} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
@@ -20,9 +21,15 @@ interface ContactForm {
   styleUrl: './cta.component.scss'
 })
 export class CtaComponent {
+  private http = inject(HttpClient);
+  
+  // Formspree endpoint
+  private readonly FORMSPREE_URL = 'https://formspree.io/f/mvgebplv';
+  
   isSubmitting = false;
   submitSuccess = signal(false);
   submitError = signal(false);
+  errorMessage = signal('');
   
   formData: ContactForm = {
     name: '',
@@ -38,32 +45,55 @@ export class CtaComponent {
     
     this.isSubmitting = true;
     this.submitError.set(false);
+    this.submitSuccess.set(false);
     
     try {
-      // Simuler l'envoi (à remplacer par votre API)
-      await this.sendEmail();
+      await this.sendToFormspree();
       
       this.submitSuccess.set(true);
       this.resetForm();
       
-      // Reset success message after 5 seconds
+      // Reset success message after 8 seconds
       setTimeout(() => {
         this.submitSuccess.set(false);
-      }, 5000);
+      }, 8000);
       
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error);
       this.submitError.set(true);
+      this.errorMessage.set('Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.');
+      
+      // Reset error message after 8 seconds
+      setTimeout(() => {
+        this.submitError.set(false);
+      }, 8000);
     } finally {
       this.isSubmitting = false;
     }
   }
 
-  private async sendEmail(): Promise<void> {
-    // TODO: Intégrer avec votre API d'envoi d'email
-    // Pour l'instant, on simule un délai
-    return new Promise((resolve) => {
-      setTimeout(resolve, 1500);
+  private sendToFormspree(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      // Préparer les données pour Formspree
+      const formData = {
+        name: this.formData.name,
+        email: this.formData.email,
+        phone: this.formData.phone || 'Non renseigné',
+        projectType: this.formData.projectType,
+        budget: this.formData.budget || 'À définir',
+        message: this.formData.message,
+        // Champ spécial pour Formspree - sujet de l'email
+        _subject: `Nouveau contact Pixel - ${this.formData.projectType}`,
+      };
+
+      this.http.post(this.FORMSPREE_URL, formData, {
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).subscribe({
+        next: () => resolve(),
+        error: (err) => reject(err)
+      });
     });
   }
 
