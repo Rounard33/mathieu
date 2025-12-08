@@ -53,11 +53,6 @@ export class FaqComponent {
       isOpen: false
     },
     {
-      question: 'Travaillez-vous uniquement en Gironde ?',
-      answer: 'Je suis basé à Lestiac-sur-Garonne (33) mais je travaille avec des clients partout en France. Nous pouvons échanger par visio, téléphone ou email selon vos préférences.',
-      isOpen: false
-    },
-    {
       question: 'Comment se passe le paiement ?',
       answer: 'Je demande généralement un acompte de 30% à la signature du devis, puis le solde à la livraison. Pour les projets importants, un échelonnement peut être envisagé.',
       isOpen: false
