@@ -25,10 +25,19 @@ export class PortfolioComponent {
       id: 'reiki-sens',
       title: 'Reiki & Sens',
       description: 'Site vitrine pour une praticienne Reiki. Design apaisant avec système de réservation en ligne et gestion des rendez-vous.',
-      image: 'assets/img/portfolio/reiki-sens.jpg',
+      image: 'assets/img/portfolio_1.png',
       tags: ['Angular', 'TypeScript', 'Supabase', 'SCSS'],
       url: 'https://reikietsens.fr',
       status: 'completed'
+    },
+    {
+      id: 'BMCAutos47',
+      title: 'BMC Autos 47',
+      description: 'Site vitrine pour un concessionnaire automobile avec formulaire de contact.',
+      image: 'assets/img/portfolio_2.png',
+      tags: ['Angular', 'TypeScript', 'SCSS'],
+      url: '',
+      status: 'in-progress'
     }
   ]);
 
