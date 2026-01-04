@@ -1,0 +1,149 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-primary); // #1a2832
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  
+  &.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2xl);
+}
+
+.loader-logo {
+  animation: fadeInScale 0.8s ease-out;
+  color: var(--accent-500);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.logo-hex {
+  color: var(--accent-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(201, 162, 39, 0.4));
+  }
+  
+  .hex-outer {
+    opacity: 0.9;
+  }
+  
+  .hex-inner {
+    opacity: 0.3;
+  }
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  color: var(--accent-500);
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 40px rgba(201, 162, 39, 0.4);
+  
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
+}
+
+.loader-spinner {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.spinner-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--accent-500);
+  border-radius: 50%;
+  animation: bounce 1.4s ease-in-out infinite;
+  
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(201, 162, 39, 0.4));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 40px rgba(201, 162, 39, 0.7));
+  }
+}
+

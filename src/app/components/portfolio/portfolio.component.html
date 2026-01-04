@@ -24,7 +24,7 @@
           <!-- Image -->
           <div class="project-image" (click)="openProject(project)" [class.clickable]="project.url">
             <div class="image-placeholder">
-              <img [src]="project.image">
+              <img [src]="project.image" [alt]="project.title">
             </div>
             
             @if (project.status === 'in-progress') {
