@@ -36,8 +36,8 @@ export class PortfolioComponent {
       description: 'Site vitrine pour un concessionnaire automobile avec formulaire de contact.',
       image: 'assets/img/portfolio_2.png',
       tags: ['Angular', 'TypeScript', 'SCSS'],
-      url: '',
-      status: 'in-progress'
+      url: 'https://bmcautos47.com',
+      status: 'completed'
     }
   ]);
 
